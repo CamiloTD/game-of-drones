@@ -1,0 +1,7 @@
+Frontend:
+  folder: ./
+  command: npm run start-next
+
+Auth:
+  folder: ./backend
+  command: npm run start

@@ -60,15 +60,6 @@ export default class extends Component {
                 timeout, round_winner,
                 end_turn_screen
             } = this.state;
-        
-        console.log({ p1_move, p2_move, 
-            p1_color, p2_color,
-            player_1, player_2,
-            moves, turn, 
-            wins, loses, ties, 
-            timeout, round_winner,
-            end_turn_screen
-        })
 
         const [ color, name, my_wins, my_loses ] = turn % 2 == 0? 
                 [ p1_color, player_1, wins, loses ] : 
@@ -200,14 +191,19 @@ async function endGame ({ winner }) {
         PersistentStorage.playing = false;
         GameStorage[winner] = (GameStorage[winner] || 0) + 1;
 
-        console.log(await GameAPI.reportGame({
-            player_1: PersistentStorage.player_1,
-            player_2: PersistentStorage.player_2,
-            wins: GameStorage.wins,
-            loses: GameStorage.loses,
-            ties: GameStorage.ties,
-            winner: winner
-        }));
+        try {
+            await GameAPI.reportGame({
+                player_1: PersistentStorage.player_1,
+                player_2: PersistentStorage.player_2,
+                wins: GameStorage.wins,
+                loses: GameStorage.loses,
+                ties: GameStorage.ties,
+                winner: winner
+            });
+        } catch (exc) {
+            alert("Error: " + exc.message);
+            return;
+        }
     }
 
     window.location.href = "/endscreen";

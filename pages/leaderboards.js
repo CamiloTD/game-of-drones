@@ -43,7 +43,13 @@ export default class extends Component {
     }
 
     async search (name) {
-        const stats = await GameAPI.stats(name);
+        let stats;
+        try {
+            stats = await GameAPI.stats(name);
+        } catch (exc) {
+            alert("Error: " + exc.message);
+            return;
+        }
 
         state.search = name; 
         state.srch = name; 
