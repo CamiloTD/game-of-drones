@@ -4,6 +4,13 @@ Customizable Rock/Paper/Scissors
   
 Try the mobile version! Looks fantastic!
 
+FrontEnd Technologies:
+    + React: Framework
+    + Booga: State Manager (Created by me: https://github.com/CamiloTD/booga)
+
+BackEnd Technologies:
+    + Unete.io: Server (Created by me: https://github.com/SuperCamiloTD/unete-io)
+
 Features:
 
 + Customize Moves
