@@ -1,6 +1,7 @@
 ## Game Of Drones
 
 Customizable Rock/Paper/Scissors
+Try the mobile version! Looks fantastic!
 
 Features:
 
