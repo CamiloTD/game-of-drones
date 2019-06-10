@@ -1,0 +1,20 @@
+{
+  "name": "uruit-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@zeit/next-stylus": "^1.0.1",
+    "booga": "^1.0.8",
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "stylus": "^0.54.5",
+    "unete-io": "^1.2.7"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "unete-cli run backend.yml && next start"
+  }
+}

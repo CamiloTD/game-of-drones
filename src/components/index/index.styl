@@ -1,0 +1,118 @@
+@keyframes glow
+    from
+        box-shadow: 0px 0px 100px #1ed760
+    to
+        box-shadow: 0px 0px 500px #1ed760
+
+@keyframes mini-glow
+    from
+        text-shadow: 0px 0px 15px #d7c11d
+    to
+        text-shadow: 0px 0px 30px #d7c11d
+
+.index-main
+    display: grid
+    
+    grid-template-rows: 40vh 30vh 20vh 10vh
+
+    height: 100vh
+    width: 100vw
+    .header
+        display: grid
+        width: 100vw
+        align-items: center
+        
+        .avatar-main
+            border-radius: 50%
+            background: none
+            text-align: center
+            
+            img 
+                width: 25vh
+                border-radius: 50%
+                animation-name: glow
+                animation-duration: 1s
+                animation-iteration-count: infinite
+                animation-direction: alternate
+
+    .body
+        display: grid
+        grid-template-rows: 1fr 32px 32px
+        align-items: center
+        padding: 20px
+
+        .title
+            font-family: 'Open Sans', sans-serif
+            text-align: center
+            color: white
+            font-size: 20px
+            font-weight: 900
+            animation-name: mini-glow
+            animation-duration: 1s
+            animation-iteration-count: infinite
+            animation-direction: alternate
+
+        span
+            display: grid
+            font-family: 'Open Sans', sans-serif
+            background: white
+            height: 100%
+            width: 100%
+            border-radius: 4px 0px 0px 4px
+            text-align: center
+            align-items: center
+            color: white
+
+        .inputs
+            display: grid
+            align-items: center
+            grid-template-columns: 55px auto
+            box-shadow: 2px 2px 4px rgba(0,0,0,.125)
+            margin-right: 20px
+            font-size: 12px
+
+            input
+                border: 1px solid rgba(0,0,0,.0625)
+                padding: 5px
+                border-radius: 0px 4px 4px 0px
+                width: 100%
+                font-family: 'Open Sans', sans-serif
+                margin-left: -1px
+                background: rgba(200,200,255,.25)
+                font-weight: 900
+                color: white
+    .footer
+        display: grid
+        align-items: start
+        justify-items: center
+        grid-template-columns: 1fr 1fr
+        padding-top: 20px
+        padding-right: 15px
+        padding-left: 5px
+
+        button
+            background: #333344
+            border: none
+            padding: 10px 30px 10px 30px
+            color:white
+            border-radius: 4px
+            box-shadow: 2px 2px 4px rgba(0,0,0,.125)
+            font-size: 15px
+            width: 80%
+    .sub-footer
+        width: calc(90vw - 20px)
+        margin-left: calc(5vw + 5px)
+        align-items: start
+        margin-top: -50px
+        .start
+            background: #333344
+            border: none
+            border-radius: 2px
+            padding: 10px 30px 10px 30px
+            width: 100%
+            font-size: 15px
+            box-shadow: 0px 0px 20px rgba(200,200,255,.25)
+            color:white
+
+            
+// .index-main .header .avatar-main

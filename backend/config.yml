@@ -1,0 +1,4 @@
+main: index.js
+port: 5545
+env:
+  DBSTR: mongodb+srv://UruIT:uruit@cluster0-7legi.mongodb.net/test?retryWrites=true&w=majority

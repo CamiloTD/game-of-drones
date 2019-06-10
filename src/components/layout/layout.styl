@@ -1,0 +1,31 @@
+@keyframes texture_move
+    from
+        transform: rotate(0)
+    to
+        transform: rotate(360deg)
+
+*
+    font-family: 'Open Sans', sans-serif
+
+.layout-main
+    width: 100vw
+    height: 100vh
+
+.layout-background
+    position: fixed
+    top : -100vh
+    left: -100vw
+
+    background-image: url('/static/textures/memphis-mini-dark.png')
+    // filter: invert(1)
+    //background-color: #D87070
+    background-size: 100vw 100vw
+    width: 300vw
+    height 300vh
+
+    animation-name: texture_move
+    animation-duration: 30s
+    animation-iteration-count: infinite
+    animation-direction: alternate
+    z-index: -9999
+    
